@@ -23,7 +23,6 @@ class SearchBar extends Component {
         
         // We need to go and fetch the Weather Data 
         this.props.fetchWeather(this.state.term, this.props.ipInfo.country);
-
         this.setState({ term : '' });
     }
 
@@ -60,4 +59,4 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators( { fetchWeather }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

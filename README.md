@@ -18,7 +18,7 @@ Search how many cities that you want!
 
 ```
 > git clone https://github.com/MGurtD/react-redux-weather-search.git
-> cd WeatherSearchApp
+> cd react-redux-weather-search
 > npm install
 > npm start
 ```

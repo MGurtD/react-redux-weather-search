@@ -10,12 +10,7 @@ class WeatherList extends Component {
         const temperatures = cityData.list.map (weather => (weather.main.temp - 273.15));
         const pressures = cityData.list.map (weather => weather.main.pressure);
         const humidities = cityData.list.map (weather => weather.main.humidity);
-        /* Vainilla Javascript
-        const lon = cityData.city.coord.lon;
-        const lat = cityData.city.coord.lat;
-        */
 
-        // ES6 - Retrive two elements from an object and set into two new variables
         const { lon, lat } = cityData.city.coord;
 
         return (
@@ -47,12 +42,6 @@ class WeatherList extends Component {
     }
 }
 
-/* Vainilla Javascript
-function mapStateToProps(state) {
-    return { weather : state.weather };
-}*/
-
-/** ES6 Javascript */
 function mapStateToProps({ weather }) {
     return { weather };
 }
